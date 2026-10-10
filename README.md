@@ -24,6 +24,16 @@
 
 <hr>
 
+> **Virya fork — one config file per camera, per vehicle.** Used through Sensors_ws
+> (`virya-ai/VOS-sensors_ws`), which builds for one vehicle (`src/build.sh <vehicle>`).
+> Each camera's settings live in `realsense2_camera/config/depth_cam_<N>_<vehicle>.yaml`
+> (realsense2_camera_node parameters, applied on top of `rs_launch.py`'s defaults,
+> which are back to the vendor's), listed in Sensors_ws's
+> `sensor_configs/config/catalogue.yaml`. The build installs each camera a vehicle has as
+> `share/sensor_configs/vehicle/realsense2_camera/<sensor name>.yaml`, and
+> `realsense2_camera/launch/virya_cameras.launch.py` starts one camera per installed file
+> (`camera_name` = the sensor name). With more than one camera, set each file's `serial_no`.
+
 ## Table of contents
   * [ROS1 and ROS2 legacy](#ros1-and-ros2-legacy)
   * [Installation on Ubuntu](#installation-on-ubuntu)

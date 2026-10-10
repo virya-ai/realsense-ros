@@ -41,6 +41,7 @@
   <test_depend condition="$ROS_DISTRO != foxy">ros2topic</test_depend>
   
   <exec_depend>launch_ros</exec_depend>
+  <exec_depend>sensor_configs</exec_depend>
   <build_depend>ros_environment</build_depend>
 
   <export>

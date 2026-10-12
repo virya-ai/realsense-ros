@@ -1,5 +1,0 @@
-# depth_cam_2 on AMR50_Canopy: parameters for realsense2_camera_node, applied on top of
-# rs_launch.py's defaults (virya_cameras.launch.py passes this as config_file).
-enable_depth: false
-enable_sync: true
-# serial_no: "'000000000000'"   # which physical D435 this camera is (needed with more than one)
